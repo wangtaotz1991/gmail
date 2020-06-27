@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan(basePackages = "com.example.gmail.user.mapper")
+@MapperScan(basePackages = "com.example.gmall.user.mapper")
 public class GmailUserApplication {
 
     public static void main(String[] args) {
