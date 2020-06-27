@@ -41,5 +41,62 @@ public class UserController {
         return umsMemberReceiveAddressList;
     }
 
+    @RequestMapping("queryUmsMemberReceiveAddress")
+    @ResponseBody
+    public List<UmsMemberReceiveAddress> queryUmsMemberReceiveAddress(UmsMemberReceiveAddress umsMemberReceiveAddress){
+        List<UmsMemberReceiveAddress> umsMemberReceiveAddressList = userService.queryUmsMemberReceiveAddress(umsMemberReceiveAddress);
+        return umsMemberReceiveAddressList;
+    }
+
+    @RequestMapping("addUmsMemberReceiveAddress")
+    @ResponseBody
+    public boolean addUmsMemberReceiveAddress(UmsMemberReceiveAddress umsMemberReceiveAddress){
+        boolean flag = userService.addUmsMemberReceiveAddress(umsMemberReceiveAddress);
+        return flag;
+    }
+
+    @RequestMapping("delUmsMemberReceiveAddress")
+    @ResponseBody
+    public boolean delUmsMemberReceiveAddress(UmsMemberReceiveAddress umsMemberReceiveAddress){
+        boolean flag = userService.delUmsMemberReceiveAddress(umsMemberReceiveAddress);
+        return flag;
+    }
+
+    @RequestMapping("updUmsMemberReceiveAddress")
+    @ResponseBody
+    public boolean updUmsMemberReceiveAddress(UmsMemberReceiveAddress umsMemberReceiveAddress){
+        boolean flag = userService.updUmsMemberReceiveAddress(umsMemberReceiveAddress);
+        return flag;
+    }
+
+
+    @RequestMapping("queryUmsMember")
+    @ResponseBody
+    public List<UmsMember> queryUmsMember(UmsMember umsMember){
+        List<UmsMember> umsMemberList = userService.queryUmsMember(umsMember);
+        return umsMemberList;
+    }
+
+    @RequestMapping("addUmsMember")
+    @ResponseBody
+    public boolean addUmsMember(UmsMember umsMember){
+        boolean flag = userService.addUmsMember(umsMember);
+        return flag;
+    }
+
+    @RequestMapping("delUmsMember")
+    @ResponseBody
+    public boolean delUmsMember(UmsMember umsMember){
+        boolean flag = userService.delUmsMember(umsMember);
+        return flag;
+    }
+
+    @RequestMapping("updUmsMember")
+    @ResponseBody
+    public boolean updUmsMember(UmsMember umsMember){
+        boolean flag = userService.updUmsMember(umsMember);
+        return flag;
+    }
+
 
 }

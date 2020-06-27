@@ -37,6 +37,70 @@ public class UserServiceImpl implements UserService {
         return umsMemberReceiveAddressList;
     }
 
+    @Override
+    public List<UmsMemberReceiveAddress> queryUmsMemberReceiveAddress(UmsMemberReceiveAddress umsMemberReceiveAddress) {
+        return umsMemberReceiveAddressMapper.select(umsMemberReceiveAddress);
+    }
+
+    @Override
+    public boolean addUmsMemberReceiveAddress(UmsMemberReceiveAddress umsMemberReceiveAddress) {
+        int updRows = umsMemberReceiveAddressMapper.insert(umsMemberReceiveAddress);
+        if(updRows >= 1){
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public boolean delUmsMemberReceiveAddress(UmsMemberReceiveAddress umsMemberReceiveAddress) {
+        int updRows = umsMemberReceiveAddressMapper.delete(umsMemberReceiveAddress);
+        if(updRows >= 1){
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public boolean updUmsMemberReceiveAddress(UmsMemberReceiveAddress umsMemberReceiveAddress) {
+        int updRows = umsMemberReceiveAddressMapper.updateByPrimaryKey(umsMemberReceiveAddress);
+        if(updRows >= 1){
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public List<UmsMember> queryUmsMember(UmsMember umsMember) {
+        return userMapper.select(umsMember);
+    }
+
+    @Override
+    public boolean addUmsMember(UmsMember umsMember) {
+        int updRows = userMapper.insert(umsMember);
+        if(updRows >= 1){
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public boolean delUmsMember(UmsMember umsMember) {
+        int updRows = userMapper.delete(umsMember);
+        if(updRows >= 1){
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public boolean updUmsMember(UmsMember umsMember) {
+        int updRows = userMapper.updateByPrimaryKey(umsMember);
+        if(updRows >= 1){
+            return true;
+        }
+        return false;
+    }
+
 /*    @Override
     public UmsMemberReceiveAddress getUReceiveAddressById(String memberId) {
         UmsMemberReceiveAddress umsMemberReceiveAddress = new UmsMemberReceiveAddress();
